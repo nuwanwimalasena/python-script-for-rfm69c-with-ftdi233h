@@ -17,7 +17,7 @@ spi = FT232H.SPI(ft232h, cs=3, max_speed_hz=500000, mode=0, bitorder=FT232H.MSBF
 
 networkID=0x02
 dataString =""
-WEB_SERVER = "192.168.8.103"
+WEB_SERVER = "192.168.8.1" #Web server IP address.
 
 CONFIG = {
   0x01: [REG_OPMODE, RF_OPMODE_SEQUENCER_ON | RF_OPMODE_LISTEN_OFF | RF_OPMODE_STANDBY],
@@ -145,7 +145,6 @@ def sendAck(receiver,sender):
 #write configuration to RFM69 to initilize device.
 print("")
 print("____________________________")
-print("*** BRIZO CONTROL CENTER ***")
 print("")
 print("NETWORK MONITER CONSOLE")
 print("")
